@@ -1,0 +1,13 @@
+<h1>{{myData.name}}</h1>
+<h2>Education</h2>
+<div>
+    <ul class="info">
+        {{#with myData.education}}
+        <li><span class="first-block">{{SchoolName}}</span>
+        <li><span class="first-block">{{Gradelevel}}</span>
+        <li><span class="first-block">{{EndEducation}}</span>
+        <li><span class="first-block">{{Major}}</span>
+        <li><span class="first-block">{{GPA}}</span>
+        {{/with}}
+    </ul>
+</div>

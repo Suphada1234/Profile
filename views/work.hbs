@@ -1,0 +1,13 @@
+<h1>{{myData.name}}</h1>
+<h2>Work Experience</h2>
+<div>
+    <ul class="info">
+        {{#with myData.workExperience}}
+        <li><span class="first-block">{{WorkName}}</span>
+        <li><span class="first-block">{{WorkingTime}}</span>
+        <li><span class="first-block">{{Position}}</span>
+        <li><span class="first-block">{{JobDescription}}</span>
+        
+        {{/with}}
+    </ul>
+</div>
