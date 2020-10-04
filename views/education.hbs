@@ -1,13 +1,23 @@
-<h1>Education</h1>
-<h2>{{myData.name}}</h2>
-<div>
-    <ul class="info">
-        {{#with myData.education}}
-        <li><span class="first-block">{{UniversityName}}</span>
-        <li><span class="first-block">{{Gradelevel}}</span>
-        <li><span class="first-block">{{Faculty}}</span>
-        <li><span class="first-block">{{Major}}</span>
-        <li><span class="first-block">{{GPA}}</span>
-        {{/with}}
-    </ul>
+<div class="section">
+  <div class="container cc-education">
+    <div class="h4 text-center mb-4 title">Education</div>
+    <div class="card">
+      <div class="row">
+		  {{#each myData.education}}
+        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body cc-education-header">
+            <p>{{this.EndEducation}}</p>
+            <div class="h5">{{this.Gradelevel}}</div>
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">{{this.Major}}</div>
+            <p class="category">{{this.Name}}</p>
+          </div>
+        </div>
+		{{/each}}
+      </div>
+    </div>
+  </div>
 </div>

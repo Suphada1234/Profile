@@ -6,7 +6,7 @@ router.get('/',(req,res)=>{         //เรียกใช้ตัวแปร
     res.render('index',{myData});
 });
 
-router.get('/aboutme',(req,res)=>{
+router.get('/about',(req,res)=>{
     res.render('about',{myData});
 });
 
@@ -14,8 +14,8 @@ router.get('/education',(req,res)=>{
     res.render('education',{myData});
 });
 
-router.get('/workexperience',(req,res)=>{
-    res.render('workexperiene',{myData});
+router.get('/experience',(req,res)=>{
+    res.render('experience',{myData});
 });
 
 router.get('/skills',(req,res)=>{
