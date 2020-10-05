@@ -1,3 +1,5 @@
+<div id="colorlib-main">
+<div class="page-content">
 <div class="profile-page">
   <div class="wrapper">
     <div class="page-header page-header-small" filter-color="green">
@@ -11,11 +13,105 @@
       </div>
       <div class="section">
         <div class="container">
-          <div class="button-container"><a class="btn btn-default btn-round btn-lg btn-icon" href="{{myData.aboutme.Facebook}}" rel="tooltip" title="Follow me on Facebook"><i class="fa fa-facebook"></i></a><a class="btn btn-default btn-round btn-lg btn-icon" href="{{myData.aboutme.Twitter}}" rel="tooltip" title="Follow me on Twitter"><i class="fa fa-twitter"></i></a><a class="btn btn-default btn-round btn-lg btn-icon" href="{{myData.aboutme.Instagram}}" rel="tooltip" title="Follow me on Instagram"><i class="fa fa-instagram"></i></a></div>
+          <div class="button-container"><a class="btn btn-default btn-round btn-lg btn-icon" href="{{myData.about.FaceBook}}" rel="tooltip" title="Follow me on Facebook"><i class="fa fa-facebook"></i></a><a class="btn btn-default btn-round btn-lg btn-icon" href="{{myData.about.Twitter}}" rel="tooltip" title="Follow me on Twitter"><i class="fa fa-twitter"></i></a><a class="btn btn-default btn-round btn-lg btn-icon" href="{{myData.about.Instagram}}" rel="tooltip" title="Follow me on Instagram"><i class="fa fa-instagram"></i></a></div>
         </div>
       </div>
     </div>
   </div>
+</div>
+<div class="section" id="about">
+  <div class="container">
+    <div class="card" data-aos="fade-up" data-aos-offset="10">
+      <div class="row">
+        <div class="col-lg-6 col-md-12">
+          <div class="card-body">
+            <div class="h4 mt-0 title">About</div>
+			<ul class="info">
+                {{#with myData.about}}
+                    <li><span class="first-block">Full Name : </span><span class="second-block">{{FullName}}</span></li>
+                    <li><span class="first-block">Gender : </span><span class="second-block">{{Gender}}</span></li>
+                    <li><span class="first-block">Age : </span><span class="second-block">{{Age}}</span></li>
+                    <li><span class="first-block">Birthday : </span><span class="second-block">{{Birthday}}</span></li>
+                    <li><span class="first-block">Nationality : </span><span class="second-block">{{Nationality}}</span></li>
+                    <li><span class="first-block">Religion : </span><span class="second-block">{{Religion}}</span></li>
+                    <li><span class="first-block">Phone : </span><span class="second-block">{{Phone}}</span></li>
+                    <li><span class="first-block">E-mail : </span><span class="second-block"><a href="{{Email}}">{{Email}}</a></span></li>
+                    <li><span class="first-block">Address : </span><span class="second-block">{{Address}}</span></li>
+                    {{/with}}
+			</ul>
+             </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section" id="education">
+  <div class="container cc-education">
+    <div class="h4 text-center mb-4 title">Education</div>
+    <div class="card">
+      <div class="row">
+		  {{#each myData.education}}
+        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body cc-education-header">
+            <p>{{this.EndEducation}}</p>
+            <div class="h5">{{this.Gradelevel}}</div>
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">{{this.Major}}</div>
+            <p class="category">{{this.Name}}</p>
+          </div>
+        </div>
+		{{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section" id="experience">
+  <div class="container cc-experience">
+    <div class="h4 text-center mb-4 title">Experience</div>
+    <div class="card">
+      <div class="row">
+		  {{#each myData.experience}}
+        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body cc-experience-header">
+            <p>{{this.WorkingTime}}</p>
+            <div class="h5">{{this.WorkName}}</div>
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">{{this.Position}}</div>
+            <p>{{this.JobDescription}}</p>
+          </div>
+        </div>
+		{{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section" id="skill">
+  <div class="container">
+    <div class="h4 text-center mb-4 title">Skills</div>
+    <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+      <div class="card-body">
+        <div class="row">
+			{{#each myData.skills}}
+          <div class="col-md-6">
+            <div class="progress-container progress-primary"><span class="progress-badge">{{this.skills}}</span>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{this.percent}}%;"></div><span class="progress-value">{{this.percent}}</span>
+              </div>
+            </div>
+          </div>
+            {{/each}}
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 </div>
 
 

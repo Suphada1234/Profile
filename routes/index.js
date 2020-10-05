@@ -6,7 +6,7 @@ router.get('/',(req,res)=>{         //เรียกใช้ตัวแปร
     res.render('index',{myData});
 });
 
-router.get('/about',(req,res)=>{
+/*router.get('/about',(req,res)=>{
     res.render('about',{myData});
 });
 
@@ -20,6 +20,6 @@ router.get('/experience',(req,res)=>{
 
 router.get('/skills',(req,res)=>{
     res.render('skills',{myData});
-});
+});*/
 
 module.exports = router;

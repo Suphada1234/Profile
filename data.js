@@ -10,7 +10,7 @@ const data ={
         "Religion" : "Buddhism",
         "Phone" : "(+66)6 3628 1264",
         "Email" : "suphada22.ae@gmail.com",
-        "faceBook" : "https://www.facebook.com/profile.php?id=100027857766473",
+        "FaceBook" : "https://www.facebook.com/profile.php?id=100027857766473",
         "Twitter" : "https://twitter.com/RabbitEyes2",
         "Instagram" : "https://www.instagram.com/blue_whale619/",
         "Address" : "85 Moo 7 Takut Rai, ChonDaen, Phetchabun 67190"
